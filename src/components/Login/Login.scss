@@ -1,4 +1,4 @@
-@media all and (min-width: 480px) {
+@media (min-width: 480px) {
   .Login {
     padding: 20px 0;
   }
@@ -7,6 +7,15 @@
     margin: 0 auto;
     max-width: 320px;
   }
+  .signin {
+    width: 400px;
+    margin: 0 auto;
+    background-color: lightblue;
+  }
+}
+
+.signin {
+  background-color: lightskyblue !important;
 }
 
 .error-message {

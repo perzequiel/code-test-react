@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Joke from "../Joke/Joke";
 import axios from "axios";
+import "./JokeList.scss";
 import Spinner from "../../spinner.gif";
 
 export default class JokeList extends Component {
@@ -66,7 +67,7 @@ export default class JokeList extends Component {
       );
     }
     return (
-      <div className="card">
+      <div className="card getjokes">
         <div className="card-body">{ret}</div>
       </div>
     );

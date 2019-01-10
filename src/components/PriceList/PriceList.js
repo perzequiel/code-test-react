@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Price from "../Price/Price";
 import axios from "axios";
+import "./PriceList.scss";
 import Spinner from "../../spinner.gif";
 
 export default class PriceList extends Component {
@@ -12,7 +13,7 @@ export default class PriceList extends Component {
     this.getPrices();
     this.interval = setInterval(() => {
       this.getPrices();
-    }, 10000);
+    }, 30000);
   }
 
   getPrices() {
@@ -78,7 +79,7 @@ export default class PriceList extends Component {
       );
     }
     return (
-      <div className="card">
+      <div className="card pricelist">
         <div className="card-body">{ret}</div>
       </div>
     );
