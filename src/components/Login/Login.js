@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Popup from "../Popup/Popup";
 import validator from "validator";
 import passwordValidator from "password-validator";
 import Spinner from "../../spinner.gif";
@@ -15,8 +16,15 @@ export default class Login extends Component {
       showEmailError: false,
       EmailErrorMsg: "",
       showPasswordError: false,
-      PasswordErrorMsg: ""
+      PasswordErrorMsg: "",
+      showPopup: false
     };
+  }
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
   }
 
   validateForm() {
@@ -79,6 +87,7 @@ export default class Login extends Component {
       this.setState({
         loading: false
       });
+      this.togglePopup();
     }, 3000);
   };
 
@@ -143,6 +152,12 @@ export default class Login extends Component {
               Sing In
             </button>
           </form>
+          {this.state.showPopup ? (
+            <Popup
+              text="You are logged in!!!"
+              closePopup={this.togglePopup.bind(this)}
+            />
+          ) : null}
         </div>
       );
     }
