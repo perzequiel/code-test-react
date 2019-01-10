@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+}
+
+.header-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#page-wrap {
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+.separator {
+  margin-bottom: 20px;
+}

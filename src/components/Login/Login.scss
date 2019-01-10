@@ -1,0 +1,21 @@
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 20px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+.error-message {
+  margin-top: 10px;
+}
+
+.spinner > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
